@@ -143,9 +143,3 @@ class Inscripcion(Base):
             session.delete(inscripcion)
             session.commit()
 
-# Configuración de la base de datos
-engine = create_engine('postgresql://postgres:123456@localhost:5432/gestion_academica')
-Base.metadata.create_all(engine)
-
-Session = sessionmaker(bind=engine)
-session = Session()
